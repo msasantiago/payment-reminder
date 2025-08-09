@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iqah Network Solution Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0);
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin: 15px auto;
+      max-width: 600px;
+      width: 100%;
+    }
+    .wifi-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 10px;
+      animation: bounce 2s infinite;
+    }
+    .wifi-icon img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    h1.business-name {
+      margin: 10px 0 15px;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #0f0;
+      text-shadow: 2px 2px 4px #000;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-7px);
+      }
+    }
+    h2 {
+      color: #000;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 8px 0;
+      font-size: 0.95em;
+      color: #000;
+    }
+    .payment-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .payment-method {
+      background: rgba(0, 0, 0, 0);
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 320px;
+      margin: auto;
+    }
+    .payment-method .logo {
+      width: 100px;
+      height: 40px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 8px;
+    }
+    .payment-method .qr {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin-top: 10px;
+      border: 2px solid #0f0;
+      border-radius: 8px;
+    }
+    .upload-form {
+      text-align: center;
+    }
+    .upload-form-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .upload-form input[type="file"] {
+      max-width: 90%;
+      text-align: center;
+      padding: 8px;
+    }
+    .upload-form button {
+      padding: 10px 20px;
+      background-color: #0f0;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    .upload-form button:hover {
+      background-color: #0c0;
+    }
+    .contact-links a {
+      color: #0f0;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1em;
+      margin: 0 10px;
+    }
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: 600px) {
+      .payment-methods {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wifi-icon">
+      <img src="wifilogo.png" alt="Green WiFi Icon">
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="business-name">Iqah Network Solution</h1>
+  </div>
+  <div class="container">
+    <h2>📌 Payment Reminder !!!</h2>
+    <p>Assalamu Alaikum! Greetings from Iqah Network Solution</p>
+    <p>This is a friendly reminder that your Internet Bill is due today. Please pay asap to stay connected.</p>
+    <p>Please send your payment through one of the methods below:</p>
+  </div>
+  <div class="container payment-methods">
+    <div class="payment-method">
+      <img class="logo" src="gcash.png" alt="GCash Logo">
+      <p>GCash</p>
+      <p>09151656295</p>
+      <p>AL-MUHSIM SANTIAGO</p>
+      <img class="qr" src="gcashqr.jpg" alt="GCash QR Code">
+      <p>Scan this QR code using your GCash app.</p>
+    </div>
+    <div class="payment-method">
+      <img class="logo" src="maya.png" alt="PayMaya Logo">
+      <p>PayMaya</p>
+      <p>09151656295</p>
+      <p>AL-MUHSIM SANTIAGO</p>
+      <img class="qr" src="mayaqr.jpg" alt="PayMaya QR Code">
+      <p>Scan this QR code using your PayMaya app.</p>
+    </div>
+  </div>
+  <div class="container upload-form">
+    <h2>📷 Upload Payment Proof</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form-inner">
+      <input type="file" name="payment_screenshot" accept="image/*" required />
+      <button type="submit">Submit Proof</button>
+    </form>
+    <p>Submit your screenshot here as proof of payment.</p>
+  </div>
+  <div class="container contact-section">
+    <h2>📲 Contact Us</h2>
+    <div class="contact-links">
+      <a href="https://www.facebook.com/msa.santiago" target="_blank">Facebook</a>
+      <a href="https://m.me/msa.santiago" target="_blank">Messenger</a>
+    </div>
+  </div>
+</body>
+</html>
